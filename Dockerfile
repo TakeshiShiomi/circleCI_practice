@@ -1,4 +1,4 @@
-FROM ruby:2.6.8
+FROM ruby:2.6.9
 
 # yarnパッケージ管理ツールをインストール
 RUN apt-get update && apt-get install -y curl apt-transport-https wget && \
