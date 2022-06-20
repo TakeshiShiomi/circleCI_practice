@@ -1,3 +1,19 @@
+version: 2.1
+
+orbs:
+  ruby: circleci/ruby@1.1.2
+  node: circleci/node@2
+
+# setup
+commands:
+  setup:
+    steps:
+      - checkout
+      - ruby/install-deps
+      - node/install-packages:
+          pkg-manager: yarn
+          cache-key: "yarn.lock"
+
 jobs:
   build:
     docker:
